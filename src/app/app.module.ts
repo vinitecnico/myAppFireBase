@@ -6,6 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { FCM } from '@ionic-native/fcm';
+import { Clipboard } from '@ionic-native/clipboard';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { HomePage } from '../pages/home/home';
     HomePage
   ],
   providers: [
+    FCM,
+    Clipboard,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
